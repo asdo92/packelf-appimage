@@ -73,6 +73,10 @@ if [ ! -z "${1}" ] ; then
     ld_so="$(echo "$libs" | grep -F '/ld-linux-' || echo "$libs" | grep -F '/ld-musl-')"
     ld_so="$(basename "$ld_so")"
     program="$(basename "${1}")"
+    if [ -z "${libs}" ] ; then
+      echo "${0}: Not a dynamic executable"
+      exit 1
+    fi
   fi
 else
   echo "Usage: ${0} <ELF_SRC_PATH> <ELF_DST_PATH>"
