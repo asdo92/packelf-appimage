@@ -18,4 +18,4 @@ Usage: ./packelf-appimage.sh <ELF_SRC_PATH> <ELF_DST_PATH>
 * chmod
 * appimagetool (https://github.com/AppImage/appimagetool/releases)
 * ldd (only needed for packing, not needed for executing or unpacking)
-
+* fusermount (only for executing)
