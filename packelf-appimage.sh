@@ -70,7 +70,7 @@ if [ ! -z "${1}" ] ; then
     exit 1
   else
     libs="$(ldd "${1}" | grep -F '/' | sed -E 's|[^/]*/([^ ]+).*?|/\1|')"
-    ld_so="$(echo "$libs" | grep -F '/ld-linux-' || echo "$libs" | grep -F '/ld-musl-')"
+    ld_so="$(echo "$libs" | grep -F '/ld-linux-' || echo "$libs" | grep -F '/ld-musl-' || echo "$libs" | grep -F '/ld.so')"
     ld_so="$(basename "$ld_so")"
     program="$(basename "${1}")"
     if [ -z "${libs}" ] ; then
