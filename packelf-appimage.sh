@@ -98,7 +98,7 @@ else
   echo "Creating executable linker"
   echo "#!/usr/bin/env sh" > ${temp_dir}/AppRun
   echo "" >> ${temp_dir}/AppRun
-  echo "\$(dirname \$0)/${ld_so} --library-path \$(dirname \$0) \$(dirname \$0)/${program} \$@" >> ${temp_dir}/AppRun
+  echo "\$(dirname \$0)/${ld_so} --library-path \$(dirname \$0) \$(dirname \$0)/${program} \"\$@\"" >> ${temp_dir}/AppRun
   create_desktop_file "${temp_dir}" "${program}"
   chmod 777 -R "${temp_dir}"
   echo "Building static binary in ${2}"
