@@ -89,7 +89,7 @@ else
   echo "" >> ${temp_dir}/AppRun
   echo "\$(dirname \$0)/${ld_so} --library-path \$(dirname \$0) \$(dirname \$0)/${program} \"\$@\"" >> ${temp_dir}/AppRun
   create_desktop_file "${temp_dir}" "${program}"
-  chmod 777 -R "${temp_dir}"
+  chmod 777 -R "${temp_dir}" 2> /dev/null
   echo "Building static binary in ${2}"
   appimagetool ${temp_dir} "${2}" > /dev/null 2> /dev/null
   rm -rf ${temp_dir}

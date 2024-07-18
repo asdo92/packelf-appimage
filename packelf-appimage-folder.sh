@@ -77,7 +77,7 @@ else
     create_desktop_file $(pwd) "default"
   fi
   cd ${current_dir}
-  chmod 777 -R "${folder}"
+  chmod 777 -R "${folder}" 2> /dev/null
   echo "Creating static binary ${2} from folder ${1}"
   echo "Creating executable linker"
   cd ${folder}
