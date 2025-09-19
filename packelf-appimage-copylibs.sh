@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-# Author: q3aql@duck.com                                                                                                                                                                                             
+# Author: asdo92@duck.com                                                                                                                                                                                             
 # Pack elf binary and it's dependencies into standalone executable using appimagetool                                                                                                                                
 # License: GPLv2.0                                                                                                                                                                                                   
 # Require: https://github.com/AppImage/appimagetool/releases
